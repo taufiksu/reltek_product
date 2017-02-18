@@ -9,3 +9,4 @@ $$('#tab-products').on('tab:show', function () {
 });
 
 categories_list();
+products_list();

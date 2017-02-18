@@ -1,5 +1,5 @@
 /*
- * Categories
+ * Categories List
  */
 
 function categories_list() {
@@ -8,8 +8,12 @@ function categories_list() {
             items: JSON.parse(data),
             renderItem: function (index, item) {
                 return '<li class="swipeout category-list-' + item.id + '" id="category-list" data-id="' + item.id + '">' +
-                    '<div class="swipeout-content item-content">' +
-                    '<div class="item-inner">' + item.title + '</div>' +
+                    '<div class="swipeout-content">' +
+                    '<a href="#" class="item-content item-link">' +
+                    '<div class="item-inner">' +
+                    '<div class="item-title-row">' + item.title + '</div>' +
+                    '</div>' +
+                    '</a>' +
                     '</div>' +
                     '<div class="swipeout-actions-right">' +
                     '<a data-confirm="Are you sure you want to delete this item?" class="swipeout-delete">Remove</a>' +
@@ -19,6 +23,10 @@ function categories_list() {
         });
     });
 }
+
+/*
+ * Categories Form Add Init
+ */
 
 reltek.onPageInit('categories-form-add', function () {
     $$('#form-category-add').attr('action', io + 'insert');
@@ -41,7 +49,11 @@ reltek.onPageInit('categories-form-add', function () {
     });
 });
 
-$$(document).on('click', '#btn-categories-form-add', function (e) {
+/*
+ * Categories Add
+ */
+
+$$(document).on('click', '#btn-categories-form-add', function () {
     var form_data = reltek.formToData('#form-category-add');
     var post_data = {
         token: token,
@@ -57,7 +69,11 @@ $$(document).on('click', '#btn-categories-form-add', function (e) {
     });
 });
 
-$$(document).on('swipeout:deleted', '#category-list', function (e) {
+/*
+ * Categories Delete Action
+ */
+
+$$(document).on('swipeout:deleted', '#category-list', function () {
     var id = $$(this).attr('data-id');
     var url = 'remove_id' +
         '/token/' + token +
@@ -70,6 +86,10 @@ $$(document).on('swipeout:deleted', '#category-list', function (e) {
         method: 'DELETE'
     })
 });
+
+/*
+ * Categories Swipeout When List Clicked
+ */
 
 $$(document).on('click', '#category-list', function () {
     var id = $$(this).attr('data-id');

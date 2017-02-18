@@ -1,10 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        
-    </body>
-</html>
+<div data-page="products-form-add" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="index.html" class="back link icon-only">
+                    <i class="icon icon-back"></i>
+                </a>
+            </div>
+            <div class="center">Product</div>
+        </div>
+    </div>
+    <div class="page-content" style="padding-top: 50px;">
+        <div class="content-block-title">Input Product</div>
+        <form id="form-product-add" class="list-block inputs-list">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">blur_on</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Code</div>
+                            <div class="item-input">
+                                <input type="text" id="code" name="code" placeholder="Product's Code"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">call_split</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Type</div>
+                            <div class="item-input">
+                                <input type="text" id="type" name="type" placeholder="Product's Type"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">dvr</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Name</div>
+                            <div class="item-input">
+                                <input type="text" id="name" name="name" placeholder="Product's Name"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">help_outline</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Description</div>
+                            <div class="item-input">
+                                <textarea id="description" name="description" class="resizable"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">local_activity</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Features</div>
+                            <div class="item-input">
+                                <textarea id="feature" name="feature" class="resizable"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon material-icons">attach_money</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title label">Price</div>
+                            <div class="item-input">
+                                <input type="text" id="price" name="price" placeholder="Price"/>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </form>
+        <div class="content-block">
+            <a href="#" class="button button-fill color-green form-to-data" id="btn-products-form-add">Submit</a>
+        </div>
+    </div>
+</div>
