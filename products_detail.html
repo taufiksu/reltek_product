@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        
-    </body>
-</html>
+<div data-page="products-detail" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a class="back link icon-only">
+                    <i class="icon icon-back"></i>
+                </a>
+            </div>
+            <div class="center">Product</div>
+        </div>
+    </div>
+
+    <div class="page-content" style="padding-top: 50px;">
+        <div class="content-block-title">Product's Information</div>
+        <div class="card ks-card-header-pic">
+            <div style="background-image:url(img/picture_add.PNG)" valign="bottom" class="card-header color-white no-border" id="product-title"></div>
+            <div class="card-content">
+                <div class="card-content-inner">
+                    <p class="color-gray" id="product-type"></p>
+                    <p id="product-description"></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a class="link" id="btn-products-categories">Category</a>
+                <a class="link" id="btn-products-images">Picture</a>
+            </div>
+        </div>
+        <div class="content-block-title">Categories</div>
+        <div class="content-block" id="categories-list"></div>
+    </div>
+</div>

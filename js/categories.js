@@ -83,7 +83,11 @@ $$(document).on('swipeout:deleted', '#category-list', function () {
         '/id/' + id;
     $$.ajax({
         url: io + url,
-        method: 'DELETE'
+        method: 'DELETE',
+        success: function () {
+            categories_list();
+            mainView.router.load({pageName: 'index'});
+        }
     })
 });
 
